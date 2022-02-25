@@ -25,6 +25,10 @@ left button pin to pin 4 of the pico.
 WARNING: YOU DO THIS AT YOUR OWN RISK! I don't immediately see any issue with doing this, but I could be wrong!
 ![button](button.jpg?raw=true)
 
+## Case
+
+If you have a 3D printer, I recommend the button variant of this case: https://www.thingiverse.com/thing:4924948
+
 # Operation
 
 ## Bootup
