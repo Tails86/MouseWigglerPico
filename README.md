@@ -23,6 +23,7 @@ This software depends on one push button installed to GP2. When pressed, this bu
 
 It is possible to setup the BOOTSEL button to use as the activation button. Solder a 1K-ohm resistor from the upper
 left button pin to pin 4 of the pico.
+
 WARNING: YOU DO THIS AT YOUR OWN RISK! I don't immediately see any issue with doing this, but I could be wrong!
 ![button](button.jpg?raw=true)
 
