@@ -9,6 +9,14 @@ This project depends on CircuitPython. Load CircuitPython downloaded at the foll
 https://circuitpython.org/board/raspberry_pi_pico/
 I tested using version 7.1.1.
 
+# Installing Dependencies using Thonny
+
+Install Thonny from: https://thonny.org/
+
+With CircuitPython installed on the Pico and the Pico connected, launch thonny. Press the stop button near the top. Go
+to `Tools->Manage Packages...`. In the search bar, type in `adafruit_hid` and click search. Then select adafruit_hid
+from the list and click Install.
+
 ## Loading MouseWigglerPico
 
 Once CircuitPython is loaded, a CIRCUITPYTHON drive should show up on your system. Just drag and drop all files from
