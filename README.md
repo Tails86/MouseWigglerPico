@@ -7,7 +7,8 @@ Mouse wiggler using the Raspberry Pi Pico microcontroller
 
 This project depends on CircuitPython. Load CircuitPython downloaded at the following link onto your Pico.
 https://circuitpython.org/board/raspberry_pi_pico/
-I tested using version 7.1.1.
+
+I tested this using version 7.1.1.
 
 # Installing Dependencies using Thonny
 
@@ -30,6 +31,7 @@ This software depends on one push button installed to GP2. When pressed, this bu
 
 It is possible to setup the BOOTSEL button to use as the activation button. Solder a 1K-ohm resistor from the upper
 left button pin to pin 4 of the pico.
+
 WARNING: YOU DO THIS AT YOUR OWN RISK! I don't immediately see any issue with doing this, but I could be wrong!
 ![button](button.jpg?raw=true)
 
