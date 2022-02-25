@@ -33,6 +33,9 @@ The boot process starts with the LED flashing 7 times over 2.5 seconds. If you p
 after the first flash, the debug serial and drive will connect for debug operation. Two quick flashes from the LED 
 confirms this operation. Otherwise, those interfaces will be disabled after boot is complete.
 
+Note that the drive will come up as read only (see note in boot.py). A tool like Thonny may then be used to edit the
+code.
+
 ## Runtime
 
 Auto wiggle is initially disabled. Single clicking the button will send 1 mouse wiggle to the host. The wiggle is 1 dot
