@@ -7,7 +7,8 @@ Mouse wiggler using the Raspberry Pi Pico microcontroller
 
 This project depends on CircuitPython. Load CircuitPython downloaded at the following link onto your Pico.
 https://circuitpython.org/board/raspberry_pi_pico/
-I tested using version 7.1.1.
+
+I tested this using version 7.1.1.
 
 ## Loading MouseWigglerPico
 
