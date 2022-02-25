@@ -24,8 +24,6 @@ Once CircuitPython is loaded, a CIRCUITPY drive should show up on your system. J
 the src directory of this project onto that drive. The drive should look like the following.
 ![button](CIRCUITPYTHON_drive.jpg?raw=true)
 
-That's it! You can now unplug the pico and plug it back in to start running.
-
 # Hardware
 
 This software depends on one push button installed to GP2. When pressed, this button should pull the input to ground.
