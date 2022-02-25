@@ -21,7 +21,10 @@ from the list and click Install.
 ## Loading MouseWigglerPico
 
 Once CircuitPython is loaded, a CIRCUITPYTHON drive should show up on your system. Just drag and drop all files from
-the src directory of this project onto that drive.
+the src directory of this project onto that drive. The drive should look like the following.
+![button](CIRCUITPYTHON_drive.jpg?raw=true)
+
+That's it! You can now unplug the pico and plug it back in to start running.
 
 # Hardware
 
