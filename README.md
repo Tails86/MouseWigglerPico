@@ -40,6 +40,8 @@ WARNING: YOU DO THIS AT YOUR OWN RISK! I don't immediately see any issue with do
 
 If you have a 3D printer, I recommend the button variant of this case: https://www.thingiverse.com/thing:4924948
 
+Printing with transparent or translucent filament allows the LED to shine through.
+
 # Operation
 
 ## Bootup
