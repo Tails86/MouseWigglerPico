@@ -15,8 +15,8 @@ SETTINGS_FILE_PATH = SETTINGS_DIR + '/settings.json'
 # Global mouse object
 mouse = None
 
-# Global settings
-settings = {'wiggling': False}
+# Global settings (default settings here)
+settings = {'wiggling': True}
 
 def mouse_init():
     global mouse

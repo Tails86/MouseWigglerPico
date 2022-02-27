@@ -55,13 +55,16 @@ code.
 
 ## Runtime
 
-Auto wiggle is initially disabled. Single clicking the button will send 1 mouse wiggle to the host. The LED flashes
-every time a mouse wiggle is sent to the host. A wiggle is 1 dot to the right then 1 dot back. Most systems will not
-even move the cursor, but this is enough to wake the system. 
+A mouse wiggle is 1 dot to the right then 1 dot back. Most systems will not even move the cursor, but this is enough to
+wake the system.
 
-Holding the button down for 1 second will cause the device to enter automatic wiggle mode. The LED turns on to confirm
-this and will remain on until the button is released. In this mode, a wiggle will be automatically sent every 1 second.
-The LED with flash every time a wiggle is sent to the host. Press the button again to disable this mode. The automatic
-wiggle setting is saved such that if automatic wiggling is activated on power down, it will be active at next power up.
+Auto wiggle mode is initially enabled. In this mode, a wiggle will be automatically sent every 1 second. The LED with
+flash every time a wiggle is sent to the host. Press the button to disable this mode.
+
+When auto wiggle mode is disabled, single clicking the button will send 1 mouse wiggle to the host. The LED flashes
+every time a mouse wiggle is sent to the host. Holding the button down for 1 second will cause the device to enter
+automatic wiggle mode. The LED turns on to confirm this and will remain on until the button is released. 
+
+The automatic wiggle setting is saved such that whatever mode is set on power down will be reloaded at next power up.
 
 Runtime operation is halted if USB data lines are disconnected from the host until USB is reconnected.
