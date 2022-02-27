@@ -50,8 +50,10 @@ The boot process starts with the LED flashing 7 times over 2.5 seconds. If you p
 after the first flash, the debug serial and drive will connect for debug operation. Two quick flashes from the LED 
 confirms this operation. Otherwise, those interfaces will be disabled after boot is complete.
 
-Note that the drive will come up as read only (see note in boot.py). A tool like Thonny may then be used to edit the
-code.
+As a fallback, debug mode may also be activated if GP1 is shorted to ground on power up.
+
+The settings storage is set as read only while in debug mode in order to avoid data corruption. This means that
+settings won't persist from power down to power up.
 
 ## Runtime
 

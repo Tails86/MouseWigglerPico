@@ -14,10 +14,8 @@ import util
 # 2. The button (GP2) is pressed and held for 1 second within the first 2.5 seconds after power up
     
 def hardware_init(enable_debug_interfaces):
-    # Allow the code to write to settings under root directory
-    # It is very easy to corrupt files if disable_concurrent_write_protection is True.
-    # Setting that to False means that the drive will show up as read only on the PC.
-    storage.remount('/', readonly=False, disable_concurrent_write_protection=False)
+    # Saved settings will be readonly while the device is in debug mode to avoid drive corruption
+    storage.remount('/', readonly=enable_debug_interfaces)
     
     # We don't use MIDI in main at all, so just disable that outright
     usb_midi.disable()
