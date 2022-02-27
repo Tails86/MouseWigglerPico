@@ -61,16 +61,16 @@ The system waits for valid data connection with the host. Once connected, the LE
 proceeding to the main loop.
 
 A mouse wiggle is 1 dot to the right then 1 dot back. Most systems will not even move the cursor, but this is enough to
-wake the system or keep it active.
+wake the system or keep it active. The LED of the pico will flash every time a wiggle is sent to the host.
 
-Auto wiggle mode is initially enabled. In this mode, a wiggle will be automatically sent every 1 second. The LED with
-flash every time a wiggle is sent to the host. Press the button to disable this mode.
+Auto wiggle mode is initially enabled. In this mode, a wiggle will be automatically sent every 1 second. Press the
+button to disable this mode.
 
-When auto wiggle mode is disabled, single clicking the button will send 1 mouse wiggle to the host. The LED flashes
-every time a mouse wiggle is sent to the host. Holding the button down for 1 second will cause the device to enter
-automatic wiggle mode. The LED turns on to confirm this and will remain on until the button is released. 
+When auto wiggle mode is disabled, single clicking the button will send 1 mouse wiggle to the host. Holding the button
+down for 1 second will cause the device to enter automatic wiggle mode. The LED turns on to confirm this and will
+remain on until the button is released. 
 
 The automatic wiggle setting is saved such that whatever mode is set on power down will be reloaded at next power up.
 
-Runtime operation is halted if, when remaining powered, the USB data lines are disconnected from the host. Runtime
-operation proceeds once data is reconnected.
+Runtime operation is halted if, while remaining powered, the USB data lines are disconnected from the host. Runtime
+operation proceeds once data is reconnected. This will happen when the host suspends.
