@@ -13,11 +13,21 @@ SETTINGS_DIR = '/settings'
 SETTINGS_FILE_PATH = SETTINGS_DIR + '/settings.json'
 
 # Global mouse object
-mouse = Mouse(usb_hid.devices)
+mouse = None
 
 # Global settings
 settings = {'wiggling': False}
 
+def mouse_init():
+    global mouse
+    # We may be stuck in this loop if device is plugged in while host is asleep
+    while mouse is None:
+        try:
+            mouse = Mouse(usb_hid.devices)
+        except:
+            time.sleep(1.0)
+    led.blink([1.0])
+        
 def mouse_move_safe(x: int = 0, y: int = 0, wheel: int = 0):
     global mouse
     try:
@@ -64,9 +74,8 @@ def main():
     global mouse
     global settings
     
-    led.set(on=False)
+    mouse_init()
     button.wait_for(wait_for_pressed=False)
-    
     read_settings()
 
     while True:
@@ -97,4 +106,12 @@ def main():
                 led.set(on=True)
                 button.wait_for(wait_for_pressed=False)
                 time.sleep(0.5)
-   
+                led.set(on=False)
+        
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        led.blink[0.5, 0.5, 0.5, 0.5, 3.0]
+        raise e
+        
