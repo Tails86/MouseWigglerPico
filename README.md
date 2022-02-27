@@ -44,7 +44,7 @@ Printing with transparent or translucent filament allows the LED to shine throug
 
 # Operation
 
-## Bootup
+## Bootup (boot.py)
 
 The boot process starts with the LED flashing 7 times over 2.5 seconds. If you press and hold the button for 1 second
 after the first flash, the debug serial and drive will connect for debug operation. Two quick flashes from the LED 
@@ -55,10 +55,13 @@ As a fallback, debug mode may also be activated if GP1 is shorted to ground on p
 The settings storage is set as read only while in debug mode in order to avoid data corruption. This means that
 settings won't persist from power down to power up.
 
-## Runtime
+## Runtime (code.py)
+
+The system waits for valid data connection with the host. Once connected, the LED turns on for 1 second before
+proceeding to the main loop.
 
 A mouse wiggle is 1 dot to the right then 1 dot back. Most systems will not even move the cursor, but this is enough to
-wake the system.
+wake the system or keep it active.
 
 Auto wiggle mode is initially enabled. In this mode, a wiggle will be automatically sent every 1 second. The LED with
 flash every time a wiggle is sent to the host. Press the button to disable this mode.
@@ -69,4 +72,5 @@ automatic wiggle mode. The LED turns on to confirm this and will remain on until
 
 The automatic wiggle setting is saved such that whatever mode is set on power down will be reloaded at next power up.
 
-Runtime operation is halted if USB data lines are disconnected from the host until USB is reconnected.
+Runtime operation is halted if, when remaining powered, the USB data lines are disconnected from the host. Runtime
+operation proceeds once data is reconnected.
