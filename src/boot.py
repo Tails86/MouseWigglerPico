@@ -20,8 +20,10 @@ def hardware_init(enable_debug_interfaces):
     # We don't use MIDI in main at all, so just disable that outright
     usb_midi.disable()
     
-    # Enable mouse HID device only
-    usb_hid.enable([usb_hid.Device.MOUSE])
+    # Enable mouse HID device only, set to boot device only if debug is disabled
+    # Something goes wrong if boot device for mouse is enabled when debug interfaces are enabled
+    boot_device = 0 if enable_debug_interfaces else 2
+    usb_hid.enable([usb_hid.Device.MOUSE], boot_device=boot_device)
     
     if not enable_debug_interfaces:
         # The following are enabled by default
