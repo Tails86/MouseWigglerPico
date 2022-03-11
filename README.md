@@ -58,7 +58,7 @@ settings won't persist from power down to power up.
 ## Runtime (code.py)
 
 The system waits for valid data connection with the host. Once connected, the LED turns on for 1 second before
-proceeding to the main loop.
+proceeding. The system then waits for the button to be released before proceeding to the main loop.
 
 A mouse wiggle is 1 dot to the right then 1 dot back. Most systems will not even move the cursor, but this is enough to
 wake the system or keep it active. The LED of the pico will flash every time a wiggle is sent to the host.
@@ -72,5 +72,5 @@ remain on until the button is released.
 
 The automatic wiggle setting is saved such that whatever mode is set on power down will be reloaded at next power up.
 
-Runtime operation is halted if, while remaining powered, the USB data lines are disconnected from the host. Runtime
-operation proceeds once data is reconnected. This will happen when the host suspends.
+Runtime operation is halted if, while remaining powered, the USB data lines are disconnected from the host. For example, 
+this may happen if the host suspends. Runtime operation proceeds once data is reconnected. 
